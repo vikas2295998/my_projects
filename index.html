@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="screen"></div>
+        <div class="0 center ">0</div>
+        <div class="1 center ">1</div>
+        <div class="2 center ">3</div> 
+        <div class="/ center ">/</div>
+        <div class="3 center ">3</div>
+        <div class="4 center ">4</div>
+        <div class="5 center ">5</div>
+        <div class="* center ">*</div>
+        <div class="6 center ">6</div>
+        <div class="7 center ">7</div>
+        <div class="8 center ">8</div>
+        <div class="+ center ">+</div>
+        <div class="9 center ">9</div>
+        <div class=" c center ">C</div>
+        <div class=" . center">.</div>
+     
+        <div class="- center ">-</div>
+        <div class="= an center "> =</div>
+       
+    </div>
+    <script>
+            // document.querySelector('pp').addEventListener('onclick',()=>{
+            //     document.querySelector('pp').append="grgfdg"
+            // })
+           
+            document.getElementsByClassName('0')[0].addEventListener('click',()=>{
+           let a= document.getElementsByClassName('screen');
+           a[0].append('0');
+       
+            })
+        
+            document.getElementsByClassName('1')[0].addEventListener('click',()=>{
+           let a= document.getElementsByClassName('screen');
+           a[0].append('1');
+     
+            })
+        
+            document.getElementsByClassName('2')[0].addEventListener('click',()=>{
+           let a= document.getElementsByClassName('screen');
+           a[0].append('2');
+          
+            })
+        
+            document.getElementsByClassName('3')[0].addEventListener('click',()=>{
+           let a= document.getElementsByClassName('screen');
+           a[0].append('3');
+         
+
+            })
+        
+            document.getElementsByClassName('4')[0].addEventListener('click',()=>{
+           let a= document.getElementsByClassName('screen');
+           a[0].append('4');
+     
+            })
+        
+            document.getElementsByClassName('5')[0].addEventListener('click',()=>{
+           let a= document.getElementsByClassName('screen');
+           a[0].append('5');
+        
+            })
+        
+            document.getElementsByClassName('6')[0].addEventListener('click',()=>{
+           let a= document.getElementsByClassName('screen');
+           a[0].append('6');
+          
+
+            })
+        
+            document.getElementsByClassName('7')[0].addEventListener('click',()=>{
+           let a= document.getElementsByClassName('screen');
+           a[0].append('7');
+          
+            })
+        
+            document.getElementsByClassName('8')[0].addEventListener('click',()=>{
+           let a= document.getElementsByClassName('screen');
+           
+           a[0].append('8');
+            })
+            document.getElementsByClassName('9')[0].addEventListener('click',()=>{
+           let a= document.getElementsByClassName('screen');
+           a[0].append('9');
+          
+            })
+        
+            document.getElementsByClassName('/')[0].addEventListener('click',()=>{
+           let a= document.getElementsByClassName('screen');
+           a[0].append('/');
+         
+            })
+        
+
+    
+            document.getElementsByClassName('*')[0].addEventListener('click',()=>{
+           let a= document.getElementsByClassName('screen');
+           a[0].append('*');
+            })
+        
+            document.getElementsByClassName('+')[0].addEventListener('click',()=>{
+           let a= document.getElementsByClassName('screen');
+           a[0].append('+');
+            })
+        
+            document.getElementsByClassName('-')[0].addEventListener('click',()=>{
+           let a= document.getElementsByClassName('screen');
+           a[0].append('-');
+            })
+            document.getElementsByClassName('.')[0].addEventListener('click',()=>{
+           let a= document.getElementsByClassName('screen');
+           a[0].append('.');
+            })
+            document.getElementsByClassName('c')[0].addEventListener('click',()=>{
+           let a= document.getElementsByClassName('screen');
+           a[0].innerText='';
+            })
+        
+            document.getElementsByClassName('=')[0].addEventListener('click',()=>{
+           let a= document.getElementsByClassName('screen');
+           let b=a[0].textContent;
+           let first="",last="",char='';
+           for(let i=0;i<b.length;i++){
+               
+               if(b[i]=='*'|b[i]=='+'||b[i]=='-'||b[i]=='/')
+                  {
+                      char=b[i];
+                      last=b.substring(i+1);
+                        break;
+                  }
+                  first+=b[i];
+                  
+           }
+           console.log(first);
+           console.log(last);
+           console.log(char);
+           switch(char){
+            case '*' :a[0].innerText=(parseFloat(first)*parseFloat(last));
+               break;
+               case '+' :a[0].innerText=(parseFloat(first)+parseFloat(last));
+               break;
+               case '/' :a[0].innerText=(parseFloat(first)/parseFloat(last));
+               break;
+               case '-' :a[0].innerText=(parseFloat(first)-parseFloat(last));
+               break;
+               default :a[0].innerText=("invalid expression!");
+           }
+         
+            })
+       
+        
+       
+    </script>
+</body>
+</html>
